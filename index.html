@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gh-contributions by IonicaBizau</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Gh-contributions</h1>
+        <p>A simple application that generates a repository that being added into your Github account creates a nice contributions graph.</p>
+
+        <p class="view"><a href="https://github.com/IonicaBizau/gh-contributions">View the Project on GitHub <small>IonicaBizau/gh-contributions</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/IonicaBizau/gh-contributions/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/IonicaBizau/gh-contributions/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/IonicaBizau/gh-contributions">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="github-contributions" class="anchor" href="#github-contributions"><span class="octicon octicon-link"></span></a>GitHub Contributions</h1>
+
+<p>A simple application that generates a repository that being added into your GitHub account creates a nice contributions calendar.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>wget -qO- https://raw.github.com/IonicaBizau/gh-contributions/master/installer.sh | sh
+</code></pre>
+
+<p>If your system does not have <em>wget</em>, you can also use <em>curl</em>:</p>
+
+<pre><code>curl https://raw.github.com/IonicaBizau/gh-contributions/master/installer.sh | sh
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The installer script will create a folder in <code>home</code> called <code>gh-contributions</code>. So enter in that folder (<code>cd ~/gh-contributions</code>) and run <code>node server</code> or directly:</p>
+
+<pre><code>node ~/gh-contributions/server.js
+</code></pre>
+
+<p>The application runs on the port <code>9000</code>. Open your browser at <code>http://localhost:9000/</code> there you will see the contribution designer. You will draw the commits. A JSON object is generated:</p>
+
+<div class="highlight highlight-JSON"><pre><span class="p">{</span>
+    <span class="nt">"coordinates"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">"x"</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+            <span class="nt">"y"</span><span class="p">:</span> <span class="err">...</span>
+        <span class="p">},</span>
+        <span class="err">...</span>
+        <span class="p">{</span>
+            <span class="err">...</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">"commitsPerDay"</span><span class="p">:</span> <span class="mi">40</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Edit the <code>commitsPerDay</code> value. That sets the day commit count.
+Then click the generate button and wait... :-) You can delight with the debug messages from terminal while the repository is generated.</p>
+
+<p>After the repository is finished you will get a link for download. Unzip the zip file, add your remote git repository and run <code>git push -u origin master</code>.</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>Design your GitHub contributions calendar using the designer from the browser:</p>
+
+<p><img src="http://i.imgur.com/n5gjb0T.png" alt=""></p>
+
+<p>A repo will be generated. After pushing it to GitHub, your profile will look like this:</p>
+
+<p><img src="http://i.imgur.com/Z8c1Ed0.png" alt=""></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/IonicaBizau">IonicaBizau</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
