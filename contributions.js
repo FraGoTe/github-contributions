@@ -3,6 +3,7 @@ var spawn   = require('child_process').spawn
   , exec    = require('child_process').exec
   , fs      = require("fs")
   , sys     = require('sys')
+  , colors  = require('colors')
   , _       = require('underscore')
   ;
 
